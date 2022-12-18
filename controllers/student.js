@@ -31,7 +31,7 @@ export const Accesstoken = (getStudent) => {
   return jwt.sign(
     { id: getStudent._id, isAdmin: getStudent.isAdmin },
     process.env.SECRETKEY,
-    { expiresIn: "10s" }
+    { expiresIn: "1d" }
   );
 };
 
